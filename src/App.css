@@ -36,3 +36,51 @@
     transform: rotate(360deg);
   }
 }
+
+/* App.css에 추가 */
+.command-palette-enter {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.command-palette-enter-active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.command-palette-exit {
+  opacity: 1;
+}
+
+.command-palette-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+
+textarea {
+  color: black;
+  width: 300%;       /* 화면 너비에 맞추거나 특정 px 값으로 설정 */
+  height: 300px;     /* 원하는 높이로 설정 */
+  font-size: 10px;   /* 원하는 글자 크기로 설정 */
+  padding: 10px;     /* 입력창 내부 여백 */
+  margin: 10px 0;    /* 입력창 주위 여백 */
+  box-sizing: border-box; /* 패딩과 보더가 너비와 높이에 포함되도록 설정 */
+}
+
+/* App.css 또는 해당 스타일 시트에 추가 */
+
+.command-palette ul {
+  list-style-type: none; /* 목록 스타일 제거 */
+  padding: 0;            /* 내부 여백 제거 */
+  margin: 0;             /* 외부 여백 제거 */
+}
+
+.command-palette li {
+  color: orange;
+  font-size: 10px; /* 원하는 글자 크기로 설정 */
+  padding: 5px 10px; /* 각 명령어 주위 여백 */
+  cursor: pointer; /* 마우스 오버 시 커서 변경 */
+}
